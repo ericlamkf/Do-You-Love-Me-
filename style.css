@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(238, 122, 141), rgb(235, 200, 206), rgb(246, 101, 101), rgb(192, 104, 192));
+    background-size: 300% 300%;
+    animation: bg-moving 3s infinite ease-in-out;
+}
+
+@keyframes bg-moving {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    bottom: 50px;
+}
+
+.content-wrap h1 {
+    padding: 10px 50px 10px;
+    font-size: 48px;
+    margin: 20px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.content-wrap h1:hover {
+    background-color: pink;
+    color: black;
+    box-shadow: 5px 5px 40px 10px pink;
+}
+
+.content-wrap .img {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.content-wrap .img img {
+    border-radius: 30px;
+    transition: filter 0.5s ease-in-out;
+}
+
+.content-wrap .img #word-blur {
+    position: absolute;
+    bottom: -50px;
+    left: 70px;
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer;
+    color: rgb(140, 48, 145);
+    transition: bottom 0.7s ease-in-out;
+}
+
+.content-wrap .img:hover img {
+    filter: blur(3px);
+}
+
+.content-wrap .img:hover #word-blur {
+    bottom: 120px;
+}
+
+.content-wrap .buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 50px;
+    margin: 30px;
+}
+
+.content-wrap .buttons button {
+    height: 50px;
+    font-size: 30px;
+    max-width: 300px;
+    max-height: 180px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(156, 100, 208);
+    border: 0;
+    border-radius: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    color: aliceblue;
+    box-shadow: 5px 5px 30px 5px rgb(157, 87, 157);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, height 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.content-wrap .buttons button:hover {
+    background-color: rgb(116, 79, 150);
+    color: black;
+}
